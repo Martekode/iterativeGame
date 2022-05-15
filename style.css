@@ -1,0 +1,40 @@
+body {
+  background-color: grey;
+  height: 100%;
+  width: 100%;
+}
+
+#headerRws {
+  background-color: #c78181;
+}
+
+#headerContr {
+  background-color: blue;
+}
+
+#rws {
+  background-color: red;
+}
+
+#contr {
+  background-color: blue;
+}
+
+#mainImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  background-color: red;
+  width: 50%;
+  min-height: 50%;
+}
+
+.lele {
+  height: 15em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 20%;
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */
