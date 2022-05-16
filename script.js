@@ -61,7 +61,7 @@ document.getElementById('mainImg').addEventListener('click', function(){
     scorePlace.innerText = scoreClicker;
     
 });
-//upgradepacks 1st upgrade
+//upgradepacks clicker
 document.getElementById('slightOfHand').addEventListener('click',function(){
     //checker resuirements
     if(scoreClicker >= upgradeScore){ 
@@ -70,12 +70,13 @@ document.getElementById('slightOfHand').addEventListener('click',function(){
         buySlightOfHandNumb = upgradeScore ;
         incClicker = incClicker *2;
         levelSOA+=1;
-        console.log(upgradeScore)
-        console.log(incClicker)
-        console.log(buySlightOfHandPlace.innerText)
-        console.log(levelSOA);
+        //console.log(upgradeScore)
+        //console.log(incClicker)
+        //console.log(buySlightOfHandPlace.innerText)
+        //console.log(levelSOA);
     }
 })
+//minion loop
 document.getElementById('minion').addEventListener('click',function(){
     //checker resuirements
     
@@ -87,10 +88,10 @@ document.getElementById('minion').addEventListener('click',function(){
         lvlMinion++;
         intervalMinion = setInterval(function() {
             scoreClicker += incMinion;
-            console.log('updatMinion');
+            //console.log('updatMinion');
         }, 1000);
-        console.log(incMinion)
-        console.log(upgradeMinion)
-        console.log(upgradeMinionPlace.innerText)
+        //console.log(incMinion)
+        //console.log(upgradeMinion)
+        //console.log(upgradeMinionPlace.innerText)
     }
 })
