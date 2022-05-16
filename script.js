@@ -1,4 +1,8 @@
 //global variables
+    //cards
+var levelSOA = 0;
+var disLvlSoa = document.getElementById('SOA');
+disLvlSoa.innerText = `Slight off hand LVL.${levelSOA}`;
     //variables for the clicker itself
 var scorePlace = document.getElementById('score');
 var scoreClicker = parseInt(scorePlace.innerText);
@@ -36,8 +40,11 @@ document.getElementById('slightOfHand').addEventListener('click',function(e){
         buySlightOfHandNumb = upgradeScore ;
         buySlightOfHandPlace.innerText = buySlightOfHandNumb;
         incClicker = incClicker *2;
+        levelSOA+=1;
+        disLvlSoa.innerText = `slight off hand lvl.${levelSOA}`;
         console.log(upgradeScore)
         console.log(incClicker)
         console.log(buySlightOfHandPlace.innerText)
+        console.log(levelSOA);
     }
 })
