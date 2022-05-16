@@ -30,10 +30,9 @@ document.getElementById('mainImg').addEventListener('click', function(){
 //upgradepacks 1st upgrade
 document.getElementById('slightOfHand').addEventListener('click',function(e){
     //checker resuirements
-    e.preventDefault;
     if(scoreClicker >= upgradeScore){
         scoreClicker = scoreClicker-upgradeScore;
-        upgradeScore = upgradeScore * 2;
+        upgradeScore = upgradeScore * 3;
         buySlightOfHandNumb = upgradeScore ;
         buySlightOfHandPlace.innerText = buySlightOfHandNumb;
         incClicker = incClicker *2;
