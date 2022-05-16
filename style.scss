@@ -4,18 +4,6 @@ body{
     width: 100%;
     font-family:"Bebas Neue";
 }
-#headerRws{
-//background-color: rgb(199, 129, 129);
-}
-#headerContr{
-    //background-color: blue;
-}
-#rws{
-    //background-color: red;
-}
-#contr{
-    //background-color: blue;
-}
 .card-img-top{
     margin-right:auto;
     margin-left: auto;
@@ -26,12 +14,10 @@ body{
 }
 #mainImg{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25%;
     //background-color: red;
-    width: 50%;
-    min-height: 50%;
+    border-radius: 15px;
+    max-height:15em;
+    max-width: 10em;
     
 }
 .explain{
@@ -41,10 +27,9 @@ body{
     margin-top: 3em;
     padding:1em;
 }
-.lele{
-    height: 15em;
-    margin-left:auto;
+.lele {
+    border-radius:15px;
+    max-width:11em;
     margin-right:auto;
-    max-width: 20%;
-    background-color: black;
+    margin-left:auto;
 }
