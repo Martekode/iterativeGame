@@ -2,6 +2,7 @@ body {
   background-color: grey;
   height: 100%;
   width: 100%;
+  font-family: "Bebas Neue";
 }
 
 #headerRws {
@@ -28,6 +29,14 @@ body {
   background-color: red;
   width: 50%;
   min-height: 50%;
+}
+
+.explain {
+  text-align: center;
+  background-color: darkgrey;
+  border-radius: 10px;
+  margin-top: 3em;
+  padding: 1em;
 }
 
 .lele {
