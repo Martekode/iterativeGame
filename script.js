@@ -14,10 +14,13 @@ var buySlightOfHandNumb = parseInt(buySlightOfHandPlace.innerText);
 var upgradeScore = buySlightOfHandNumb;
 //checker loop
 setInterval(function(){
+    disLvlSoa.innerText = `slight off hand lvl.${levelSOA}`;
+    scorePlace.innerText = scoreClicker;
+    buySlightOfHandPlace.innerText = buySlightOfHandNumb;
     if(scoreClicker >= buySlightOfHandNumb){
         buySlightOfHandPlace.classList.remove('disabled');
         buySlightOfHandPlace.style.backgroundColor = "green";
-        buySlightOfHandPlace.style.borderColor = "lightgreen"
+        buySlightOfHandPlace.style.borderColor = "lightgreen";
     }
     else{
         buySlightOfHandPlace.classList.add('disabled');
@@ -32,16 +35,14 @@ document.getElementById('mainImg').addEventListener('click', function(){
     
 });
 //upgradepacks 1st upgrade
-document.getElementById('slightOfHand').addEventListener('click',function(e){
+document.getElementById('slightOfHand').addEventListener('click',function(){
     //checker resuirements
-    if(scoreClicker >= upgradeScore){
+    if(scoreClicker >= upgradeScore){ 
         scoreClicker = scoreClicker-upgradeScore;
         upgradeScore = upgradeScore * 3;
         buySlightOfHandNumb = upgradeScore ;
-        buySlightOfHandPlace.innerText = buySlightOfHandNumb;
         incClicker = incClicker *2;
         levelSOA+=1;
-        disLvlSoa.innerText = `slight off hand lvl.${levelSOA}`;
         console.log(upgradeScore)
         console.log(incClicker)
         console.log(buySlightOfHandPlace.innerText)
