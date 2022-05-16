@@ -9,7 +9,9 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-height: 10em;
+  min-height: 10em;
   max-width: 12em;
+  min-width: 12em;
 }
 
 #mainImg {
