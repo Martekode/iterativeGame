@@ -1,8 +1,16 @@
 //global variables
     //cards
+        //1stcard
 var levelSOA = 0;
 var disLvlSoa = document.getElementById('SOA');
 disLvlSoa.innerText = `Slight off hand LVL.${levelSOA}`;
+        //2nd crad
+var lvlMinion = 0;
+var disLvlMinion = document.getElementById('minion-header');
+var incMinion = 1;
+var upgradeMinionPlace = document.getElementById('minion');
+var upgradeMinion = parseInt(upgradeMinionPlace.innerText);
+var intervalMinion;
     //variables for the clicker itself
 var scorePlace = document.getElementById('score');
 var scoreClicker = parseInt(scorePlace.innerText);
@@ -24,8 +32,27 @@ setInterval(function(){
     }
     else{
         buySlightOfHandPlace.classList.add('disabled');
+        buySlightOfHandPlace.style.backgroundColor = "red";
+        buySlightOfHandPlace.style.borderColor = "darkred";
     }
-    console.log('updating');
+    //console.log('updating');
+},1000)
+//checker second card
+setInterval(function(){
+    disLvlMinion.innerText = `minion LVL.${lvlMinion}`;
+    scorePlace.innerText = scoreClicker;
+    upgradeMinionPlace.innerText = upgradeMinion;
+    if(scoreClicker >= upgradeMinion){
+        upgradeMinionPlace.classList.remove('disabled');
+        upgradeMinionPlace.style.backgroundColor = "green";
+        upgradeMinionPlace.style.borderColor = "lightgreen";
+    }
+    else{
+        upgradeMinionPlace.classList.add('disabled');
+        upgradeMinionPlace.style.backgroundColor = "red";
+        upgradeMinionPlace.style.borderColor = "darkred";
+    }
+    //console.log('updating');
 },1000)
 //clicker function
 document.getElementById('mainImg').addEventListener('click', function(){
@@ -47,5 +74,23 @@ document.getElementById('slightOfHand').addEventListener('click',function(){
         console.log(incClicker)
         console.log(buySlightOfHandPlace.innerText)
         console.log(levelSOA);
+    }
+})
+document.getElementById('minion').addEventListener('click',function(){
+    //checker resuirements
+    
+    if(scoreClicker >= upgradeMinion){
+        clearInterval(intervalMinion);
+        scoreClicker = scoreClicker - upgradeMinion;
+        incMinion = incMinion + 5;
+        upgradeMinion = upgradeMinion*3;
+        lvlMinion++;
+        intervalMinion = setInterval(function() {
+            scoreClicker += incMinion;
+            console.log('updatMinion');
+        }, 1000);
+        console.log(incMinion)
+        console.log(upgradeMinion)
+        console.log(upgradeMinionPlace.innerText)
     }
 })
