@@ -5,6 +5,13 @@ body {
   font-family: "Bebas Neue";
 }
 
+.card-img-top {
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 10em;
+  max-width: 12em;
+}
+
 #mainImg {
   display: block;
   margin-left: auto;
