@@ -35,4 +35,15 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+.card-body {
+  text-align: center;
+}
+
+.kaartje {
+  min-height: 25em;
+  max-height: 25em;
+  margin-top: 2em;
+  padding: 1em;
+}
 /*# sourceMappingURL=style.css.map */
