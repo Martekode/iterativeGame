@@ -7,7 +7,7 @@ disLvlSoa.innerText = `Slight off hand LVL.${levelSOA}`;
         //2nd crad
 var lvlMinion = 0;
 var disLvlMinion = document.getElementById('minion-header');
-var incMinion = 1;
+var incMinion = 5;
 var upgradeMinionPlace = document.getElementById('minion');
 var upgradeMinion = parseInt(upgradeMinionPlace.innerText);
 var intervalMinion;
@@ -82,7 +82,7 @@ document.getElementById('minion').addEventListener('click',function(){
     if(scoreClicker >= upgradeMinion){
         clearInterval(intervalMinion);
         scoreClicker = scoreClicker - upgradeMinion;
-        incMinion = incMinion + 5;
+        incMinion = incMinion *2;
         upgradeMinion = upgradeMinion*3;
         lvlMinion++;
         intervalMinion = setInterval(function() {
