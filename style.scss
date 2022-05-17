@@ -18,7 +18,24 @@ body{
     border-radius: 15px;
     max-height:15em;
     max-width: 10em;
-    
+    animation:pulse 1s linear infinite;
+}
+@keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+    }
+
+    50% {
+     transform: scale(1.1, 1.1);
+    }
+
+    100% {
+    transform: scale(1, 1);
+    }
+}
+
+#test {
+    animation: pulse 1s linear infinite;
 }
 .explain{
     text-align: center;
