@@ -19,6 +19,15 @@ var disLvlNewPack=document.getElementById('newPackHeader');
 var lvlNewPack=0;
 var upgradeNewPackPlace=document.getElementById('newPack');
 var upgradeNewPack = parseInt(upgradeNewPackPlace.innerText);
+        //4th card
+var fame =0;
+var famePlace = document.getElementById('fame');
+var disFame = `fame: ${fame}`;
+
+var upgradeJapBuyerPlace=document.getElementById('japBuyer');
+var upgradeJapBuyer=parseInt(upgradeJapBuyerPlace.innerText);
+var lvlJapBuyer =0;
+var disLvlJapBuyer = document.getElementById('japHeader');
     //variables for the clicker itself
 var scorePlace = document.getElementById('score');
 var scoreClicker = parseInt(scorePlace.innerText);
@@ -79,6 +88,24 @@ setInterval(function(){
     }
     //console.log('updating');
 },timer)
+//checker fourth card
+setInterval(function(){
+    disLvlJapBuyer.innerText = `japanese buyer LVL.${lvlJapBuyer}`;
+    famePlace.innerText = disFame;
+    scorePlace.innerText = scoreClicker;
+    upgradeJapBuyerPlace.innerText = upgradeJapBuyer;
+    if(scoreClicker >= upgradeJapBuyer){
+        upgradeJapBuyerPlace.classList.remove('disabled');
+        upgradeJapBuyerPlace.style.backgroundColor = "green";
+        upgradeJapBuyerPlace.style.borderColor = "lightgreen";
+    }
+    else{
+        upgradeJapBuyerPlace.classList.add('disabled');
+        upgradeJapBuyerPlace.style.backgroundColor = "red";
+        upgradeJapBuyerPlace.style.borderColor = "darkred";
+    }
+    //console.log('updating');
+},timer)
 //clicker function
 document.getElementById('mainImg').addEventListener('click', function(){
     //Clicker
@@ -132,4 +159,24 @@ document.getElementById('newPack').addEventListener('click',function(){
     incMinion = incMinion*2;
     incClicker = incClicker*2;
     vtimer = 500;
+})
+//fouorth card
+document.getElementById('japBuyer').addEventListener('click',function(){
+    if(lvlJapBuyer == 0){
+       scorePlace.style.color = "gold";
+    }
+    else if(lvlJapBuyer == 4){
+        scorePlace.style.color ="red";
+    }
+    else if(lvlJapBuyer == 9){
+        scorePlace.style.color ="blue";
+    }
+    fame = fame+=upgradeJapBuyer;
+    scoreClicker = scoreClicker-upgradeJapBuyer;
+    lvlJapBuyer++;
+    upgradeJapBuyer = upgradeJapBuyer*10;
+    incMinion = incMinion/2;
+    incClicker = incClicker/2;
+    vtimer = 500;
+    
 })
