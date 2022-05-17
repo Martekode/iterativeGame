@@ -1,4 +1,6 @@
 //global variables
+const timer = 1000;
+var vtimer = 1000;
     //cards
         //1stcard
 var levelSOA = 0;
@@ -11,6 +13,12 @@ var incMinion = 5;
 var upgradeMinionPlace = document.getElementById('minion');
 var upgradeMinion = parseInt(upgradeMinionPlace.innerText);
 var intervalMinion;
+        //3rd card
+var mainImg = document.getElementById('mainImg')
+var disLvlNewPack=document.getElementById('newPackHeader');
+var lvlNewPack=0;
+var upgradeNewPackPlace=document.getElementById('newPack');
+var upgradeNewPack = parseInt(upgradeNewPackPlace.innerText);
     //variables for the clicker itself
 var scorePlace = document.getElementById('score');
 var scoreClicker = parseInt(scorePlace.innerText);
@@ -36,7 +44,7 @@ setInterval(function(){
         buySlightOfHandPlace.style.borderColor = "darkred";
     }
     //console.log('updating');
-},1000)
+},timer)
 //checker second card
 setInterval(function(){
     disLvlMinion.innerText = `minion LVL.${lvlMinion}`;
@@ -53,7 +61,24 @@ setInterval(function(){
         upgradeMinionPlace.style.borderColor = "darkred";
     }
     //console.log('updating');
-},1000)
+},timer)
+//checker third card
+setInterval(function(){
+    disLvlNewPack.innerText = `Pack Manager LVL.${lvlNewPack}`;
+    scorePlace.innerText = scoreClicker;
+    upgradeNewPackPlace.innerText = upgradeNewPack;
+    if(scoreClicker >= upgradeNewPack){
+        upgradeNewPackPlace.classList.remove('disabled');
+        upgradeNewPackPlace.style.backgroundColor = "green";
+        upgradeNewPackPlace.style.borderColor = "lightgreen";
+    }
+    else{
+        upgradeNewPackPlace.classList.add('disabled');
+        upgradeNewPackPlace.style.backgroundColor = "red";
+        upgradeNewPackPlace.style.borderColor = "darkred";
+    }
+    //console.log('updating');
+},timer)
 //clicker function
 document.getElementById('mainImg').addEventListener('click', function(){
     //Clicker
@@ -89,9 +114,22 @@ document.getElementById('minion').addEventListener('click',function(){
         intervalMinion = setInterval(function() {
             scoreClicker += incMinion;
             //console.log('updatMinion');
-        }, 1000);
+        }, vtimer);
         //console.log(incMinion)
         //console.log(upgradeMinion)
         //console.log(upgradeMinionPlace.innerText)
     }
+})
+//third card
+document.getElementById('newPack').addEventListener('click',function(){
+    if(lvlNewPack == 0){
+        mainImg.removeAttribute('src');
+        mainImg.setAttribute('src',"./images/golden.jpg")
+    }
+    scoreClicker = scoreClicker-upgradeNewPack;
+    lvlNewPack++;
+    upgradeNewPack = upgradeNewPack*3;
+    incMinion = incMinion*2;
+    incClicker = incClicker*2;
+    vtimer = 500;
 })

@@ -20,7 +20,7 @@ the second card allows you to start a loop that gives cards per second per upgra
 (still to add)
 third card allows you to get better packs and therefor modifying the amount of cards you get
 
-### grading and selling to chinese buyer
+### grading and selling to japanese buyer
 (if i have time to add)
 you can trade in your cards for fame score
 (use of it needs to be added)
