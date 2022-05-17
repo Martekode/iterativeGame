@@ -91,7 +91,7 @@ setInterval(function(){
 //checker fourth card
 setInterval(function(){
     disLvlJapBuyer.innerText = `japanese buyer LVL.${lvlJapBuyer}`;
-    famePlace.innerText = disFame;
+    famePlace.innerText = `fame: ${fame}`;
     scorePlace.innerText = scoreClicker;
     upgradeJapBuyerPlace.innerText = upgradeJapBuyer;
     if(scoreClicker >= upgradeJapBuyer){
