@@ -1,5 +1,5 @@
 # iterativeGame
-## Gotta Click 'em All
+## PackClicker
 
 ### updater
 the game updates ever second or lower (still have to tweek) to check if the score >= the upgrade cost
