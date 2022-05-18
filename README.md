@@ -17,11 +17,10 @@ the firs card allows you to upgrade your opening skills and gives you more cards
 the second card allows you to start a loop that gives cards per second per upgrade
 
 ### better packs
-(still to add)
-third card allows you to get better packs and therefor modifying the amount of cards you get
+third card allows you to get a better pack and therefor modifying the amount of cards you get
 
 ### grading and selling to japanese buyer
-(if i have time to add)
 you can trade in your cards for fame score
-(use of it needs to be added)
+it halves your code but that's the price of fame.
+acts like a prestige. it tranforms text into 3 different prestige colors. gold - red - blue.
 
